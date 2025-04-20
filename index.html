@@ -4,184 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon Clone</title>
+    <meta name="description" content="Amazon clone for practice – built by Aman Maikhuri">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="darkmode">
     <header>
-        <div class="navbar">
-            <div class="nav_logo  border">
-                <div class="logo"></div>
-            </div>
-        <div class="nav_address border">
-            <div class="address">Deliver to</div>
-            <div class="box1"><div class="loactionicon">
-                <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div class="country">India</div>
-        </div>
-        </div>
-        <div class="nav_search border">
-            <select name="All" id="items">
-                <option>All</option>
+        <!-- NAVIGATIONs -->
+        <nav role="navigation">
+                <!-- LOGO -->
+                <div class="nav_logo  border">
+                    <div class="logo" aria-label="amazon logo"></div>
+                </div>
+
+                <!-- navigation bar -->
+                <div class="navbar">
+
+                    <!-- delivery address -->
+                    <div class="nav_address border">
+                        <div class="address">Deliver to</div>
+                        <div class="country-name">
+                            <div class="locationicon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="country">India</div>
+                        </div>
+                    </div>
+
+                    <!-- search box -->
+                    <div class="nav_search border">
+                        <!-- search categories -->
+                        <select name="All" id="items">
+                            <option value="All">All</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Mobile & Accessories">Mobile & Accessories</option>
+                            <option value="Daily Essentials">Daily Essentials</option>
+                            <option value="Computers & Laptops">Computers & Laptops</option>
+                        </select>
+                        <input type="text" placeholder="Search Amazon" class="search">
+                        <div class="searchicon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+
+                    <!-- language selection -->
+                    <div class="nav_language border">
+                        <div class="language">
+                            <div class="flag">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                            <select name="lang" id="lang">
+                                <option value="english">EN</option>
+                                <option value="hindi">HI</option>
+                                <option value="punjabi">PN</option>
+                                <option value="haryanvi">HR</option>
+                                <option value="kannada">KN</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- account section -->
+                    <div class="nav_account border">
+                        <div class="signup">Hello,sign in</div>
+                        <div class="signin">Account & Lists</div>
+                    </div>
+
+                    <!-- orders and returns section -->
+                    <div class="nav_orders border">
+                        <div class="returns">Returns</div>
+                        <div class="orders">& orders</div>
+                    </div>
+
+                    <!-- cart section -->
+                    <div class="nav_cart border">
+                        <div class="cart">
+                            <i class="fas fa-shopping-cart">0</i>
+                        </div>
+                        <div class="orders">Cart</div>
+                    </div>
+                </div>
+
+                <!-- dark mode toggle -->
+                <div class="toggle border"><i class="fas fa-sun"></i></div>
+        </nav>
+     <!-- pannel division -->
+     <div class="pannel">
+        <div class="menubar border">
+            <select>
+                <option value="all"><i class="fas fa-bars"></i>All</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Mobile & Accessories">Mobile & Accessories</option>
+                <option value="Daily Essentials">Daily Essentials</option>
+                <option value="Computers & Laptops">Computers & Laptops</option>
             </select>
-            <input type="text" placeholder="Search Amazon" class="search">
-            <div class="searchicon">
-                <i class="fas fa-search" style="color: #0f1111;"></i>
-            </div>
+            
         </div>
-        <div class="nav_language border">
-            <div class="language">
-                <div class="flag">
-                <i class="fas fa-globe"></i>
-            </div>
-                <select name="lang" id="lang" style="color: #0f1111;">
-                    <option>EN</option>
-                </select>
-            </div>
+        <div class="list">
+                <li class="border">Today's deals</li>
+                <li class="border">Customer Service</li>
+                <li class="border">Registry</li>
+                <li class="border">Gift Cards</li>
+                <li class="border">Sell</li>
         </div>
-
-        <div class="nav_account border">
-            <div class="signup">Hello,sign in</div>
-            <div class="signin">Account & Lists</div>
-        </div>
-
-        <div class="nav_orders border">
-            <div class="returns">Returns</div>
-            <div class="orders">& orders</div>
-        </div>
-
-        <div class="nav_cart border">
-            <div class="cart">
-                <i class="fas fa-shopping-cart">0</i>
-            </div>
-            <div class="orders">Cart</div>
-        </div>
-        </div>
-        <div class="pannel">
-            <div class="menubar border">
-                <select>
-                    <option><i class="fas fa-bars"></i>All</option>
-                </select>
-                
-            </div>
-            <div class="list">
-                    <li class="border">Today's deals</li>
-                    <li class="border">Customer Service</li>
-                    <li class="border">Registry</li>
-                    <li class="border">Gift Cards</li>
-                    <li class="border">Sell</li>
-            </div>
-        </div>
+    </div>
     </header>
-    <main>
+        <!-- main body of the app -->
+    <main id="main">
         <div class="hero">
             <div class="herosection">
                 <p class="note">
                     You are on amazon.com. 
                     You can also shop on Amazon India for millions of products with fast local delivery.
-                    <a style="color: #007185;"> Click here to go to amazon.in</a>
+                    <a> Click here to go to amazon.in</a>
                 </p>
             </div>  
-            <div class="boxsection">
-                <div class="box">
-                    <h2>Gaming Accessories</h2>
-                    <div class="subbox" id="a1">Headsets</div>
-                    <div class="subbox" id="a2">keyboards</div>
-                    <div class="subbox" id="a3">Computer mice</div>
-                    <div class="subbox" id="a4"> chairs</div>
-                    <p>See more</p>
-                </div>
-                <div class="box">
-                    <h2>Shop for your home essentials</h2>
-                    <div class="subbox" id="b1">Cleaning Tools</div>
-                    <div class="subbox" id="b2">Home Storage</div>
-                    <div class="subbox" id="b3">Home Decor</div>
-                    <div class="subbox" id="b4">Bedding</div>
-                    <p>Discover more in Home</p>
-                </div>
-                <div class="box cover">
-                    <h2>Shop deals in Fashion</h2>
-                    <div class="subbox" id="c1">Jeans under $50</div>
-                    <div class="subbox" id="c2">Tops under $25</div>
-                    <div class="subbox" id="c3">Dresses under $30</div>
-                    <div class="subbox" id="c4">Shoes under $50</div>
-                    <p>See all deals</p>
-                </div>
-                <div class="box">
-                    <h2>Top categories in Kitchen appliances</h2>
-                    <div class="subbox" id="e1">Cooker</div>
-                    <div class="subbox" id="e2">Coffee</div>
-                    <div class="subbox" id="e3">Pots & Pans</div>
-                    <div class="subbox" id="e4">Kettles</div>
-                    <p>Explore all products in Kitchen</p>
-                    
-                </div>
-                <div class="box">
-                    <h2>New home arrivals under $50</h2>
-                    <div class="subbox" id="f1">Dining</div>
-                    <div class="subbox" id="f2">Home</div>
-                    <div class="subbox" id="f3">Kitchen</div>
-                    <div class="subbox" id="f4">Health & Beauty</div>
-                    <p>Shop the latest from Home</p>
-                </div>
-                <div class="box">
-                    <h2>Refresh your space</h2>
-                    <div class="subbox" id="d1">Kitchen & dining</div>
-                    <div class="subbox" id="d2">Home improvement</div>
-                    <div class="subbox" id="d3">Decor</div>
-                    <div class="subbox" id="d4">Bedding & bath</div>
-                    <p>See more</p>
-                </div>
-                <div class="box">
-                    <h2>Wireless Tech Appliances</h2>
-                    <div class="subbox" id="g1">Smartphones</div>
-                    <div class="subbox" id="g2">watches</div>
-                    <div class="subbox" id="g3">Headphones</div>
-                    <div class="subbox" id="g4">Tablets</div>
-                    <p>Discover more</p>
-                </div>
-                <div class="box">
-                    <h2>Most-loved watches</h2>
-                    <div class="subbox" id="h1">Women</div>
-                    <div class="subbox" id="h2">Men</div>
-                    <div class="subbox" id="h3">Girls</div>
-                    <div class="subbox" id="h4">Boys</div>
-                    <p>Discover more</p>
-                </div>
-                <div class="box">
-                    <h2>Most-loved travel essentials</h2>
-                    <div class="subbox" id="i1">Backpacks</div>
-                    <div class="subbox" id="i2">Suitcases</div>
-                    <div class="subbox" id="i3">Accessories</div>
-                    <div class="subbox" id="i4">Handbags</div>
-                    <p>Discover more</p>
-                </div>
-                <div class="box">
-                    <h2>Level up your beauty routine</h2>
-                    <div class="subbox" id="j1">Makeup</div>
-                    <div class="subbox" id="j2">Brushes</div>
-                    <div class="subbox" id="j3">Sponges</div>
-                    <div class="subbox" id="j4">Mirrors</div>
-                    <p>See more</p>
-                </div>
-                <div class="box">
-                    <h2>Fantastic finds for home</h2>
-                    <div class="subbox" id="k1">Kitchen</div>
-                    <div class="subbox" id="k2">Home Decor</div>
-                    <div class="subbox" id="k3">Dining</div>
-                    <div class="subbox" id="k4">Smart Home</div>
-                    <p>See more</p>
-                </div>
-                <div class="box">
-                    <h2>Score the top PCs & Accessories</h2>
-                    <div class="subbox" id="l1">Desktops</div>
-                    <div class="subbox" id="l2">Laptops</div>
-                    <div class="subbox" id="l3">Hard Drives</div>
-                    <div class="subbox" id="l4">PC Accessories</div>
-                    <p>See more</p>
-                </div>
-            </div>
+            <div class="boxsection"></div>
         </div>
         <div class="logincontainer">
             <div class="requestlogin">
@@ -241,12 +178,13 @@
             </div>
         </div>
         <div class="amazon">
-            <div class="nav_logo"></div>
-                <div class="logo"></div>
+            <div class="nav_logo  border">
+                <div class="logo" ></div>
+            </div>
                 <div class="section">
-                    <i class="fas fa-globe">  English</i>
+                    <i class="fas fa-globe">English</i>
                 </div> 
-                <div class="section">$ USD-U.S.Dollor</div> 
+                <div class="section">$ USD-U.S.Dollar</div> 
                 <div class="section">
                     <i class="fas fa-globe">  United States</i>
                 </div>
@@ -261,6 +199,8 @@
                 © 1996-2024, Amazon.com, Inc. or its affiliates
             </div>
         </div>
+        <p>© 2025 Aman Maikhuri — Inspired by Amazon clone</p>        
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
